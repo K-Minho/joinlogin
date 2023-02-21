@@ -28,7 +28,7 @@ public class UserController {
       }
 
       @PostMapping(value = "/join")
-      public String join(JoinReqDto joinReqDto) {
+      public String join(JoinReqDto joinReqDto) throws Exception {
             if (joinReqDto.getUsername() == null || joinReqDto.getUsername().isEmpty()) {
                   throw new CustomException("username을 작성해주세요");
             }
@@ -48,7 +48,7 @@ public class UserController {
       }
 
       @PostMapping(value = "/login")
-      public String login(LoginReqDto loginReqDto) {
+      public String login(LoginReqDto loginReqDto) throws Exception {
             if (loginReqDto.getUsername() == null || loginReqDto.getUsername().isEmpty()) {
                   throw new CustomException("username을 작성해주세요");
             }
