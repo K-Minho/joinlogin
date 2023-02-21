@@ -3,5 +3,5 @@ create table user_tb (
     username varchar not null unique,
     password varchar not null,
     email varchar not null,
-    enabled varchar
+    enabled_one varchar
 );
